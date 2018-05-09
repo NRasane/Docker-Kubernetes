@@ -1,0 +1,16 @@
+- hosts: all
+  become: yes
+  tasks:
+    - name: create the 'author' user
+      user: name=author append=yes state=present createhome=yes shell=/bin/bash
+
+    - name: allow 'author' to have passwordless sudo
+      lineinfile:
+        dest: /etc/sudoers
+        line: 'author ALL=(ALL) NOPASSWD: ALL'
+        validate: 'visudo -cf %s'
+
+    - name: set up authorized keys for the author user
+      authorized_key: user=author key="{{item}}"
+      with_file:
+        - ~/.ssh/id_rsa.pub
