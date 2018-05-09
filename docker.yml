@@ -49,6 +49,8 @@
       repo: "{{ docker_repo_line.stdout }}"
       state: present
     become: true
-      
-  - name: install docker ce
-    apt:  name=docker-ce
+    
+  - name: Install Docker
+    apt:
+      pkg:          docker-ce=17.03.0~ce-0~ubuntu-xenial
+      state:        present
