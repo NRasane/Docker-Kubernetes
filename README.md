@@ -4,6 +4,7 @@ Added yml scripts
 
 
 steps to setup ansible (install Ansible on localhost)
+
 1> localhost where we can able to create ssh-key to share on master for primary connectivity
 
 2> having 1 master and 2 worker nodes on AWS (port opened 80,443,22)
@@ -17,4 +18,5 @@ steps to setup ansible (install Ansible on localhost)
 6> create docker.yml and run it
 
 7> create initial.yml, kube-dependencies.yml, master.yml and workers.yml and run in same sequence
+
 eg: ansible-playbook -i hosts ~/dk-cluster/<playbook_name>.yml (from localhost where ansible is installed)
