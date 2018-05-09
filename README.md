@@ -17,3 +17,4 @@ steps to setup ansible
 6> create docker.yml and run it
 
 7> create initial.yml, kube-dependencies.yml, master.yml and workers.yml and run in same sequence
+eg: ansible-playbook -i hosts ~/dk-cluster/<playbook_name>.yml (from localhost where ansible is installed)
