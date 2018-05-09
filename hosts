@@ -1,5 +1,5 @@
 [masters]
-master ansible_host=172.31.30.5 ansible_user=ubuntu
+master.example.com ansible_host=172.31.30.5 ansible_user=ubuntu
 
 [workers]
 worker1 ansible_host=172.31.30.140 ansible_user=ubuntu
