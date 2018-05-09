@@ -3,7 +3,7 @@ Ansible playbooks to get ready with Docker CE installation and Kubernetes with p
 Added yml scripts
 
 
-steps to setup ansible
+steps to setup ansible (install Ansible on localhost)
 1> localhost where we can able to create ssh-key to share on master for primary connectivity
 
 2> having 1 master and 2 worker nodes on AWS (port opened 80,443,22)
